@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Documentos/NetBeansProjects/JavaMedSystem/JavaMedSystem/src/javamedsystem/JavaMedSystem.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/JavaMedSystem/src/Clases/Persona.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/JavaMedSystem/src/javamedsystem/JavaMedSystem.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/JavaMedSystem/src/Clases/Cliente.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/JavaMedSystem/src/Clases/Accion.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/JavaMedSystem/src/Clases/Dato.java</file>
         </group>
     </open-files>
 </project-private>
