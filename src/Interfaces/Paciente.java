@@ -5,21 +5,22 @@
  */
 package Interfaces;
 
-import Clases.Cliente;
+import Clases.Sesion;
 
 /**
  *
  * @author romer
  */
 public class Paciente extends javax.swing.JFrame {
-
+Sesion sesion_act;
     /**
      * Creates new form Paciente
+     * @param sesion_act
      */
-    public Paciente() {
+    public Paciente(Sesion sesion_act) {
         initComponents();
+        this.sesion_act=sesion_act;
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -43,7 +44,7 @@ public class Paciente extends javax.swing.JFrame {
         nacimientotxt = new com.toedter.calendar.JDateChooser();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        paistxtt = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         deptxt = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -56,7 +57,7 @@ public class Paciente extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         estadocivtxt = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
-        hijostxt = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         paisrestxt = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
@@ -116,12 +117,6 @@ public class Paciente extends javax.swing.JFrame {
 
         jLabel4.setText("Numero:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 134, -1, -1));
-
-        numerotxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numerotxtActionPerformed(evt);
-            }
-        });
         getContentPane().add(numerotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 131, 180, -1));
         getContentPane().add(nacimientotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 257, 139, -1));
 
@@ -130,7 +125,7 @@ public class Paciente extends javax.swing.JFrame {
 
         jLabel6.setText("Pais:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 260, -1, -1));
-        getContentPane().add(paistxtt, new org.netbeans.lib.awtextra.AbsoluteConstraints(394, 257, 98, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(394, 257, 98, -1));
 
         jLabel7.setText("Dep:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, -1, -1));
@@ -183,7 +178,7 @@ public class Paciente extends javax.swing.JFrame {
 
         jLabel12.setText("Hijos:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(574, 199, -1, -1));
-        getContentPane().add(hijostxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(625, 196, 58, -1));
+        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(625, 196, 58, -1));
 
         jLabel13.setText("Pais Residencia:");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 396, -1, -1));
@@ -270,7 +265,7 @@ public class Paciente extends javax.swing.JFrame {
 
         paistxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoGen.png"))); // NOI18N
         paistxt.setText("jLabel16");
-        getContentPane().add(paistxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, 10, 1050, -1));
+        getContentPane().add(paistxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 0, 1050, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -298,35 +293,24 @@ public class Paciente extends javax.swing.JFrame {
     }//GEN-LAST:event_estadocivtxtActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      Cliente cliente_act=new Cliente();
-      
-      cliente_act.setNombres(nombrestxt.getText());
-      cliente_act.setApellidos(apellidostxt.getText());
-      cliente_act.setSexo(sextxt);
-      cliente_act.setEstado_civil(estcivtxt);
-      //cliente_act.setFecha_nac(nacimientotxt.getDate());
-      cliente_act.setPais(paistxtt.getText());
-      cliente_act.setDep(deptxt.getText());
-      cliente_act.setOcupacion(ocupaciontxt.getText());
-      cliente_act.setEscolaridad(escolaridadtxt.getText());
-      cliente_act.setPais_res(paisrestxt.getText());
-      cliente_act.setDepartamento_res(deprestxt.getText());
-      cliente_act.setCiudad_res(ciudadrestxt.getText());
-      cliente_act.setId_tipo(id_tipo);
-      cliente_act.setNumeroid(Integer.parseInt(numerotxt.getText()));
-      cliente_act.setHijos(Integer.parseInt(hijostxt.getText()));
-      cliente_act.setIdentificacion(Integer.parseInt(numerotxt.getText()));
-      
-      
-      
-      
-      
-      
-    }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void numerotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numerotxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numerotxtActionPerformed
+      sesion_act.getCliente_act().setNombres(nombrestxt.getText());
+      sesion_act.getCliente_act().setApellidos(apellidostxt.getText());
+      sesion_act.getCliente_act().setSexo(sextxt);
+      sesion_act.getCliente_act().setEstado_civil(estcivtxt);
+      //cliente_act.setFecha_nac(nacimientotxt.getDate());
+      sesion_act.getCliente_act().setPais(paistxtt.getText());
+      sesion_act.getCliente_act().setDep(deptxt.getText());
+      sesion_act.getCliente_act().setOcupacion(ocupaciontxt.getText());
+      sesion_act.getCliente_act().setEscolaridad(escolaridadtxt.getText());
+      sesion_act.getCliente_act().setPais_res(paisrestxt.getText());
+      sesion_act.getCliente_act().setDepartamento_res(deprestxt.getText());
+      sesion_act.getCliente_act().setCiudad_res(ciudadrestxt.getText());
+      sesion_act.getCliente_act().setId_tipo(id_tipo);
+      sesion_act.getCliente_act().setNumeroid(Integer.parseInt(numerotxt.getText()));
+      sesion_act.getCliente_act().setHijos(Integer.parseInt(hijostxt.getText()));
+sesion_act.getCliente_act().setIdentificacion(Integer.parseInt(numerotxt.getText()));        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
     String sextxt; 
     String estcivtxt;
     int id_tipo;
@@ -360,11 +344,10 @@ public class Paciente extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Paciente().setVisible(true);
+                new Paciente(new Sesion()).setVisible(true);
             }
         });
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidostxt;
@@ -374,7 +357,6 @@ public class Paciente extends javax.swing.JFrame {
     private javax.swing.JTextField deptxt;
     private javax.swing.JTextField escolaridadtxt;
     private javax.swing.JComboBox<String> estadocivtxt;
-    private javax.swing.JTextField hijostxt;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -402,13 +384,14 @@ public class Paciente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField8;
     private com.toedter.calendar.JDateChooser nacimientotxt;
     private javax.swing.JTextField nombrestxt;
     private javax.swing.JTextField numerotxt;
     private javax.swing.JTextField ocupaciontxt;
     private javax.swing.JTextField paisrestxt;
     private javax.swing.JLabel paistxt;
-    private javax.swing.JTextField paistxtt;
     private javax.swing.JComboBox<String> sexotxt;
     // End of variables declaration//GEN-END:variables
 }

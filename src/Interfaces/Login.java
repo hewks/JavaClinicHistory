@@ -5,6 +5,9 @@
  */
 package Interfaces;
 
+import Clases.Accion;
+import Clases.Sesion;
+
 /**
  *
  * @author romer
@@ -50,6 +53,11 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, -1, -1));
 
         jButton2.setText("Conectar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondologin.png"))); // NOI18N
@@ -59,6 +67,18 @@ public class Login extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+Accion login=new Accion();
+Sesion sesion_act=login.login(usernametxt.getText(), passwordtxt.getText());
+if(sesion_act!=null){
+    dispose();
+    new Menu(sesion_act).setVisible(true);
+};
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
