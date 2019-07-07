@@ -6,83 +6,22 @@
 package Clases;
 
 import java.security.*;
-import java.sql.*;
 
 /**
  *
  * @author Juan
  */
-public class Accion extends Informacion{
+public class Accion {
     public Sesion login(String user, String raw_password){
-        String resultado[][];
         Sesion sesion_act=null;
         String password=encriptar(raw_password);
-        String SQL="SELECT * FROM "+user_table+" WHERE "+user_table_username+"='"+user+"' AND ";
-        Conexion cc=new Conexion();
-        Connection con=cc.Conectar();
-        try {
-           Statement st =con.createStatement();
-           ResultSet rs = st.executeQuery(SQL);
-           ResultSetMetaData rsmd=rs.getMetaData();
-           rs.last();
-           int i=rs.getRow();
-           int mi=i;
-           rs.beforeFirst();
-           int j=rsmd.getColumnCount();
-           int mj=j;
-           resultado=new String[i][j];
-           i=0;
-           while(i<mi){
-               rs.next();
-               j=0;
-               while(j<mj){
-               resultado[i][j]=rs.getString(j+1);
-           j++;
-               }
-               i++;
-           }
-        cc.Desconectar();
-           return sesion_act;
-        } catch (SQLException ex) {
-            System.out.println("error sacando datos "+ex);
-        }
+        Conexion con=new Conexion();
+        con.Conectar();
         
     return sesion_act;
     }
     
-    public String[][] SacarDatos(String resDato,String nombreDelDato_parametro,String Dato_parametro, String tabla){
-        String SQL="SELECT "+resDato+" FROM "+tabla+" WHERE "+nombreDelDato_parametro+" = "+Dato_parametro;
-        String[][] resultado=null;
-     Conexion cc=new Conexion();
-      Connection con=cc.Conectar();
-        try {
-           Statement st =con.createStatement();
-           ResultSet rs = st.executeQuery(SQL);
-           ResultSetMetaData rsmd=rs.getMetaData();
-           rs.last();
-           int i=rs.getRow();
-           int mi=i;
-           rs.beforeFirst();
-           int j=rsmd.getColumnCount();
-           int mj=j;
-           resultado=new String[i][j];
-           i=0;
-           while(i<mi){
-               rs.next();
-               j=0;
-               while(j<mj){
-               resultado[i][j]=rs.getString(j+1);
-           j++;
-               }
-               i++;
-           }
-        cc.Desconectar();
-           return resultado;
-        } catch (SQLException ex) {
-            System.out.println("error sacando datos "+ex);
-        }
-        return null;
-    }
+    
     //Sistema de encryptacion de Datos
     
     public String encriptar(String password){
