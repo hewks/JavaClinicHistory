@@ -5,16 +5,20 @@
  */
 package Interfaces;
 
+import Clases.Sesion;
+
 /**
  *
  * @author romer
  */
 public class Menu extends javax.swing.JFrame {
-
+Sesion sesion_act;
     /**
      * Creates new form Menu
+     * @param sesion_act
      */
-    public Menu() {
+    public Menu(Sesion sesion_act) {
+        this.sesion_act=sesion_act;
         initComponents();
     }
 
@@ -89,7 +93,7 @@ public class Menu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menu().setVisible(true);
+                new Menu(new Sesion()).setVisible(true);
             }
         });
     }

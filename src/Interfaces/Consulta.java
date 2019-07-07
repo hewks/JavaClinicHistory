@@ -5,16 +5,19 @@
  */
 package Interfaces;
 
+import Clases.Sesion;
+
 /**
  *
  * @author romer
  */
 public class Consulta extends javax.swing.JFrame {
-
+Sesion sesion_act;
     /**
      * Creates new form Consulta
      */
-    public Consulta() {
+    public Consulta(Sesion sesion_act) {
+        this.sesion_act=sesion_act;
         initComponents();
     }
 
@@ -261,7 +264,7 @@ public class Consulta extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Consulta().setVisible(true);
+                new Consulta(new Sesion()).setVisible(true);
             }
         });
     }

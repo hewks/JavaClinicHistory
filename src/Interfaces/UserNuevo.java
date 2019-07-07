@@ -5,16 +5,20 @@
  */
 package Interfaces;
 
+import Clases.Sesion;
+
 /**
  *
  * @author romer
  */
 public class UserNuevo extends javax.swing.JFrame {
-
+Sesion sesion_act;
     /**
      * Creates new form UserNuevo
+     * @param sesion_act
      */
-    public UserNuevo() {
+    public UserNuevo(Sesion sesion_act) {
+        this.sesion_act=sesion_act;
         initComponents();
     }
 
@@ -114,7 +118,7 @@ public class UserNuevo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new UserNuevo().setVisible(true);
+                new UserNuevo(new Sesion()).setVisible(true);
             }
         });
     }
