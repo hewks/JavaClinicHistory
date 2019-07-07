@@ -44,18 +44,18 @@ public class Consulta extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        pesotxt = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        tallatxt = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        imctxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        imc2txt = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -70,6 +70,7 @@ public class Consulta extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel19 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
 
@@ -94,7 +95,7 @@ public class Consulta extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 164, 797, -1));
 
         jLabel3.setText("Revisión fisica general:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 288, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, -1, -1));
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -120,19 +121,19 @@ public class Consulta extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(723, 409, 302, -1));
 
-        jLabel6.setText("Peso:");
+        jLabel6.setText("Peso(kg):");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 553, -1, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 550, 122, -1));
+        getContentPane().add(pesotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 122, -1));
 
-        jLabel7.setText("Talla:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(449, 553, -1, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, 102, -1));
+        jLabel7.setText("Talla(m):");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 550, -1, -1));
+        getContentPane().add(tallatxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, 102, -1));
 
         jLabel8.setText("IMC:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(643, 553, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 550, -1, -1));
 
-        jTextField4.setText("Automatico");
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(694, 550, 82, -1));
+        imctxt.setText("Automatico");
+        getContentPane().add(imctxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 550, 82, -1));
 
         jLabel9.setText("Tensión:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 602, -1, -1));
@@ -151,10 +152,10 @@ public class Consulta extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(916, 599, 109, -1));
-        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(916, 550, 109, -1));
+        getContentPane().add(imc2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(916, 550, 109, -1));
 
         jLabel12.setText("Estado IMC");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(826, 553, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 550, -1, -1));
 
         jLabel13.setText("Diagnostico general:");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 675, -1, -1));
@@ -178,7 +179,7 @@ public class Consulta extends javax.swing.JFrame {
         jTextArea5.setRows(5);
         jScrollPane5.setViewportView(jTextArea5);
 
-        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 639, 786, -1));
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 660, 786, -1));
 
         jLabel18.setText("Codigo CEI-10:");
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 770, -1, -1));
@@ -187,19 +188,48 @@ public class Consulta extends javax.swing.JFrame {
         jLabel19.setText("Fecha:");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(783, 46, -1, -1));
 
+        jButton1.setText("Calcular");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 550, 80, -1));
+
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoGen.png"))); // NOI18N
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 590));
+        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 380));
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoGen.png"))); // NOI18N
         jLabel23.setText("jLabel23");
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 1140, 430));
+        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 1140, 540));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        double x = Double.parseDouble(tallatxt.getText());
+        double y = Double.parseDouble(pesotxt.getText());
+        double z = y/(x*x);
+        imctxt.setText(""+z);
+        if (z<=18.5){
+            imc2txt.setText("");
+        }
+        if (z<=24.9&&z>18.5){
+            imc2txt.setText("Normal");
+        }
+        if (z<=29.9&&z>=25){
+            imc2txt.setText("Sobrepeso");
+        }
+        if (z>=30){
+            imc2txt.setText("Obesidad");
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,6 +267,9 @@ public class Consulta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField imc2txt;
+    private javax.swing.JTextField imctxt;
+    private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -274,13 +307,11 @@ public class Consulta extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField pesotxt;
+    private javax.swing.JTextField tallatxt;
     // End of variables declaration//GEN-END:variables
 }

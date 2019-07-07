@@ -45,7 +45,7 @@ public class UserNuevo extends javax.swing.JFrame {
         jLabel2.setText("Seleccione el rol del usuario:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
 
-        selrol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seleccionar", "Administrador", "Moderador", "Usuario" }));
+        selrol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Administrador", "Moderador", "Usuario" }));
         getContentPane().add(selrol, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 130, -1));
 
         jLabel3.setText("Usuario:");
@@ -66,17 +66,18 @@ public class UserNuevo extends javax.swing.JFrame {
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 130, -1));
         getContentPane().add(passwordtxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 130, -1));
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Cancelar");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Guardar");
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, -1, -1));
 
         passwordtxt1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoGen.png"))); // NOI18N
         passwordtxt1.setText("Seleccione el rol del usuario:");
-        getContentPane().add(passwordtxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 567, 470));
+        getContentPane().add(passwordtxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 470));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed

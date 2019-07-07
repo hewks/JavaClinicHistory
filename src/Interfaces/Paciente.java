@@ -27,39 +27,40 @@ public class Paciente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        nombrestxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        apellidostxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        numerotxt = new javax.swing.JTextField();
+        nacimientotxt = new com.toedter.calendar.JDateChooser();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        deptxt = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        ocupaciontxt = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        escolaridadtxt = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        sexotxt = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        estadocivtxt = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        paisrestxt = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        deprestxt = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        ciudadrestxt = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
@@ -68,25 +69,32 @@ public class Paciente extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
+        paistxt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Nombres:");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 75, -1, -1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 72, 174, -1));
+        getContentPane().add(nombrestxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 72, 174, -1));
 
         jLabel2.setText("Apellidos:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 75, -1, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 72, 178, -1));
+        getContentPane().add(apellidostxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 72, 178, -1));
 
         jLabel3.setText("Identificación: ");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 134, -1, -1));
 
+        buttonGroup1.add(jCheckBox1);
         jCheckBox1.setText("TI");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 130, -1, -1));
 
+        buttonGroup1.add(jCheckBox2);
         jCheckBox2.setText("CC");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,13 +103,19 @@ public class Paciente extends javax.swing.JFrame {
         });
         getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 130, -1, -1));
 
+        buttonGroup1.add(jCheckBox3);
         jCheckBox3.setText("CE");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 130, -1, -1));
 
         jLabel4.setText("Numero:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 134, -1, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 131, 180, -1));
-        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 257, 139, -1));
+        getContentPane().add(numerotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 131, 180, -1));
+        getContentPane().add(nacimientotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 257, 139, -1));
 
         jLabel5.setText("Fecha Nacimiento:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 263, -1, -1));
@@ -112,15 +126,15 @@ public class Paciente extends javax.swing.JFrame {
 
         jLabel7.setText("Dep:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, -1, -1));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 257, 128, -1));
+        getContentPane().add(deptxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 257, 128, -1));
 
         jLabel8.setText("Ocupación: ");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 324, -1, -1));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 324, 145, -1));
+        getContentPane().add(ocupaciontxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 324, 145, -1));
 
         jLabel9.setText("Escolaridad:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 327, -1, -1));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(492, 324, 191, -1));
+        getContentPane().add(escolaridadtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(492, 324, 191, -1));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -140,14 +154,24 @@ public class Paciente extends javax.swing.JFrame {
         jLabel10.setText("Sexo:");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 199, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 196, 90, -1));
+        sexotxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Masculino", "Femenino", "Otros" }));
+        sexotxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sexotxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sexotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 196, 110, -1));
 
         jLabel11.setText("Estado Civil:");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 199, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 196, 103, -1));
+        estadocivtxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Casado/a", "Soltero/a", "Union Libre", "Viudo", "Separado" }));
+        estadocivtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadocivtxtActionPerformed(evt);
+            }
+        });
+        getContentPane().add(estadocivtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 196, 103, -1));
 
         jLabel12.setText("Hijos:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(574, 199, -1, -1));
@@ -155,15 +179,15 @@ public class Paciente extends javax.swing.JFrame {
 
         jLabel13.setText("Pais Residencia:");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 396, -1, -1));
-        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 393, 109, -1));
+        getContentPane().add(paisrestxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 393, 109, -1));
 
         jLabel15.setText("Departamento:");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 396, -1, -1));
-        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 393, 99, -1));
+        getContentPane().add(deprestxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 393, 99, -1));
 
         jLabel14.setText("Ciudad:");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 396, -1, -1));
-        getContentPane().add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(589, 393, 94, -1));
+        getContentPane().add(ciudadrestxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(589, 393, 94, -1));
 
         jButton1.setText("Nueva Consulta");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(759, 292, 194, -1));
@@ -180,13 +204,15 @@ public class Paciente extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton6))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 711, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 735, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,17 +255,37 @@ public class Paciente extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 330, 230, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoGen.png"))); // NOI18N
-        jLabel16.setText("jLabel16");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 0, 1050, -1));
+        paistxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoGen.png"))); // NOI18N
+        paistxt.setText("jLabel16");
+        getContentPane().add(paistxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 0, 1050, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
+        id_tipo = 2;
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
+    private void sexotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexotxtActionPerformed
+        sextxt = sexotxt.getSelectedItem().toString();
+    }//GEN-LAST:event_sexotxtActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        id_tipo = 1;
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+         id_tipo = 3;
+                    
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    private void estadocivtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadocivtxtActionPerformed
+        estcivtxt = estadocivtxt.getSelectedItem().toString();
+    }//GEN-LAST:event_estadocivtxtActionPerformed
+    String sextxt; 
+    String estcivtxt;
+    int id_tipo;
     /**
      * @param args the command line arguments
      */
@@ -276,6 +322,13 @@ public class Paciente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField apellidostxt;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextField ciudadrestxt;
+    private javax.swing.JTextField deprestxt;
+    private javax.swing.JTextField deptxt;
+    private javax.swing.JTextField escolaridadtxt;
+    private javax.swing.JComboBox<String> estadocivtxt;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -285,9 +338,6 @@ public class Paciente extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -295,7 +345,6 @@ public class Paciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -307,16 +356,14 @@ public class Paciente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private com.toedter.calendar.JDateChooser nacimientotxt;
+    private javax.swing.JTextField nombrestxt;
+    private javax.swing.JTextField numerotxt;
+    private javax.swing.JTextField ocupaciontxt;
+    private javax.swing.JTextField paisrestxt;
+    private javax.swing.JLabel paistxt;
+    private javax.swing.JComboBox<String> sexotxt;
     // End of variables declaration//GEN-END:variables
 }
