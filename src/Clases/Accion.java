@@ -68,6 +68,20 @@ public class Accion extends Informacion{
     }
     
     
+    
+    
+    
+    
+    
+    public void historia(Sesion sesion_act){
+    Conexion con=new Conexion();
+        Connection cc=con.Conectar();
+        String SQL="INSERT INTO "+history_table+" (user_id,motivo_consulta,antecedentes_familiares,revision_general,codigo_diagnostico,"
+                + "antecedentes_personales,pais,ciudad,localidad,fecha,sintomas,peso,talla,imc,estado_imc,tension,frecuencia_cardiaca,"
+                + "frecuencia_respiratoria)values(";
+    }
+    
+    
     //Sistema de encryptacion de Datos
     
     public String encriptar(String password){

@@ -11,6 +11,15 @@ package Clases;
  */
 public class Sesion extends Persona{
     Cliente cliente_act=null;
+    Historial historial_act=null;
+
+    public Historial getHistorial_act() {
+        return historial_act;
+    }
+
+    public void setHistorial_act(Historial historial_act) {
+        this.historial_act = historial_act;
+    }
 
     public Cliente getCliente_act() {
         return cliente_act;

@@ -21,6 +21,7 @@ public class Informacion {
     protected String client_table="clients";
     protected String user_table_username="username";
     protected String user_table_password="password";
+    protected String history_table="clinic_history";
 
     public void setUser_table(String user_table) {
         this.user_table = user_table;
