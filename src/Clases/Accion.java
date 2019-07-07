@@ -41,21 +41,23 @@ public class Accion extends Informacion{
     public void paciente(Sesion sesion_act){
         Conexion con=new Conexion();
         Connection cc=con.Conectar();
-        String SQL="INSERT INTO "+client_table+" (nombres,apellidos,identificacion,tipo_identificacion,sexo,estado_civil,"
-                + "hijos,fecha_nacimiento,pais,departamento,ocupacion,escolaridad,pais_residencia,ciudad_residencia)values"
-                + "("+sesion_act.getCliente_act().getNombres()+","
-                + sesion_act.getCliente_act().getApellidos()+","
-                + sesion_act.getCliente_act().getIdentificacion()+","
-                + sesion_act.getCliente_act().getSexo()+","
-                + sesion_act.getCliente_act().getEstado_civil()+","
-                + sesion_act.getCliente_act().getHijos()+","
-                + sesion_act.getCliente_act().getFecha_nac()+","
-                + sesion_act.getCliente_act().getPais()+","
-                + sesion_act.getCliente_act().getDep()+","
-                + sesion_act.getCliente_act().getOcupacion()+","
-                + sesion_act.getCliente_act().getEscolaridad()+","
-                + sesion_act.getCliente_act().getPais_res()+","
-                + sesion_act.getCliente_act().getCiudad_res()+")";
+        String SQL="INSERT INTO clients (nombres,apellidos,identificacion,tipo_identificacion,"
+                + "sexo,estado_civil,hijos,fecha_nacimiento,pais,departamento,ocupacion,escolaridad,pais_residencia,ciudad_residencia)values"
+                + "('"+sesion_act.getCliente_act().getNombres()+"',"
+                + "'"+sesion_act.getCliente_act().getApellidos()+"',"
+                + "'"+sesion_act.getCliente_act().getIdentificacion()+"',"
+                + "'"+sesion_act.getCliente_act().getTipo_id()+"',"
+                + "'"+sesion_act.getCliente_act().getSexo()+"',"
+                + "'"+sesion_act.getCliente_act().getEstado_civil()+"',"
+                + "'"+sesion_act.getCliente_act().getHijos()+"',"
+                + "'"+sesion_act.getCliente_act().getFecha_nac()+"',"
+                + "'"+sesion_act.getCliente_act().getPais()+"',"
+                + "'"+sesion_act.getCliente_act().getDep()+"',"
+                + "'"+sesion_act.getCliente_act().getOcupacion()+"',"
+                + "'"+sesion_act.getCliente_act().getEscolaridad()+"',"
+                + "'"+sesion_act.getCliente_act().getPais_res()+"',"
+                + "'"+sesion_act.getCliente_act().getCiudad_res()+"')";
+        System.out.println(SQL);
         try {
             PreparedStatement pst=cc.prepareStatement(SQL);
             pst.execute();
@@ -78,7 +80,25 @@ public class Accion extends Informacion{
         Connection cc=con.Conectar();
         String SQL="INSERT INTO "+history_table+" (user_id,motivo_consulta,antecedentes_familiares,revision_general,codigo_diagnostico,"
                 + "antecedentes_personales,pais,ciudad,localidad,fecha,sintomas,peso,talla,imc,estado_imc,tension,frecuencia_cardiaca,"
-                + "frecuencia_respiratoria)values(";
+                + "frecuencia_respiratoria)values("
+                + sesion_act.getHistorial_act().getUser_id()+","
+                + sesion_act.getHistorial_act().getMotivo_consulta()+","
+                + sesion_act.getHistorial_act().getAntecedentes_familiares()+","
+                + sesion_act.getHistorial_act().getRevision_general()+","
+                + sesion_act.getHistorial_act().getCodigo()+","
+                + sesion_act.getHistorial_act().getAntecedentes_personales()+","
+                + sesion_act.getHistorial_act().getPais()+","
+                + sesion_act.getHistorial_act().getCiudad()+","
+                + sesion_act.getHistorial_act().getLocalidad()+","
+                + sesion_act.getHistorial_act().getFecha()+","
+                + sesion_act.getHistorial_act().getSintomas()+","
+                + sesion_act.getHistorial_act().getPeso()+","
+                + sesion_act.getHistorial_act().getTalla()+","
+                + sesion_act.getHistorial_act().getImc()+","
+                + sesion_act.getHistorial_act().getEstado_imc()+","
+                + sesion_act.getHistorial_act().getTension()+","
+                + sesion_act.getHistorial_act().getFrec_cardiaca()+","
+                + sesion_act.getHistorial_act().getFrec_respiratoria()+")";
     }
     
     

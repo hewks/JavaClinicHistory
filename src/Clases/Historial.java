@@ -10,8 +10,16 @@ package Clases;
  * @author romer
  */
 public class Historial {
-    String pais,ciudad,localidad,fecha,motivo_consulta,sintomas,revision_general,antecedentes_personales,antecedentes_familiares,diagnostico,codigo,estado_imc;
+    String user_id,pais,ciudad,localidad,fecha,motivo_consulta,sintomas,revision_general,antecedentes_personales,antecedentes_familiares,diagnostico,codigo,estado_imc;
 
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
+    }
+    
     public String getPais() {
         return pais;
     }

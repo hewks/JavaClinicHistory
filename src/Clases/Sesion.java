@@ -25,9 +25,10 @@ public class Sesion extends Persona{
         return cliente_act;
     }
 
-    public void setCliente_act(Cliente actual) {
+    public void setCliente_act(Cliente cliente_act) {
         this.cliente_act = cliente_act;
     }
+
     
     
 }

@@ -5,6 +5,8 @@
  */
 package Interfaces;
 
+import Clases.Accion;
+import Clases.Cliente;
 import Clases.Sesion;
 
 /**
@@ -293,11 +295,11 @@ Sesion sesion_act;
     }//GEN-LAST:event_estadocivtxtActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-
+        sesion_act.setCliente_act(new Cliente());
       sesion_act.getCliente_act().setNombres(nombrestxt.getText());
       sesion_act.getCliente_act().setApellidos(apellidostxt.getText());
-      sesion_act.getCliente_act().setSexo(sextxt);
-      sesion_act.getCliente_act().setEstado_civil(estcivtxt);
+      sesion_act.getCliente_act().setSexo(sexotxt.getSelectedItem().toString());
+      sesion_act.getCliente_act().setEstado_civil(estadocivtxt.getSelectedItem().toString());
       //cliente_act.setFecha_nac(nacimientotxt.getDate());
       sesion_act.getCliente_act().setPais(paistxt.getText());
       sesion_act.getCliente_act().setDep(deptxt.getText());
@@ -309,7 +311,10 @@ Sesion sesion_act;
       sesion_act.getCliente_act().setId_tipo(id_tipo);
       sesion_act.getCliente_act().setNumeroid(Integer.parseInt(numerotxt.getText()));
       sesion_act.getCliente_act().setHijos(Integer.parseInt(hijostxt.getText()));
-sesion_act.getCliente_act().setIdentificacion(Integer.parseInt(numerotxt.getText()));        // TODO add your handling code here:
+sesion_act.getCliente_act().setIdentificacion(Integer.parseInt(numerotxt.getText())); 
+        Accion paciente =new Accion();
+        paciente.paciente(sesion_act);
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
     String sextxt; 
     String estcivtxt;
