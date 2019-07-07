@@ -17,8 +17,22 @@ public class Informacion {
     protected static final String PASS="Asdfghjkl159753";
     protected static final String PORT="24186";
     protected static final String ARG="?useSSL=false";
-    protected String user_database="users";
-    protected String client_database="";
+    protected String user_table="users";
+    protected String client_table="";
+    protected String user_table_username="username";
+
+    public void setUser_table(String user_table) {
+        this.user_table = user_table;
+    }
+
+    public void setClient_table(String client_table) {
+        this.client_table = client_table;
+    }
+
+    public void setUser_table_username(String user_table_username) {
+        this.user_table_username = user_table_username;
+    }
+    
     
 
     
