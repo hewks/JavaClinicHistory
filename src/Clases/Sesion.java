@@ -10,5 +10,15 @@ package Clases;
  * @author Juan
  */
 public class Sesion extends Persona{
+    Cliente actual=null;
+
+    public Cliente getActual() {
+        return actual;
+    }
+
+    public void setActual(Cliente actual) {
+        this.actual = actual;
+    }
+    
     
 }
