@@ -11,7 +11,15 @@ package Clases;
  */
 public class Cliente {
     String nombres,apellidos,sexo,estado_civil,fecha_nac,pais,dep,ocupacion,escolaridad,pais_res,departamento_res,ciudad_res;
-    int id_tipo, numeroid,hijos;
+    int id_tipo, numeroid,hijos,identificacion;
+
+    public int getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(int identificacion) {
+        this.identificacion = identificacion;
+    }
 
     public String getNombres() {
         return nombres;
