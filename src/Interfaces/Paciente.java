@@ -5,22 +5,19 @@
  */
 package Interfaces;
 
-import Clases.Sesion;
-
 /**
  *
  * @author romer
  */
 public class Paciente extends javax.swing.JFrame {
-Sesion sesion_act;
+
     /**
      * Creates new form Paciente
-     * @param sesion_act
      */
-    public Paciente(Sesion sesion_act) {
+    public Paciente() {
         initComponents();
-        this.sesion_act=sesion_act;
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -319,7 +316,7 @@ Sesion sesion_act;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Paciente(new Sesion()).setVisible(true);
+                new Paciente().setVisible(true);
             }
         });
     }
